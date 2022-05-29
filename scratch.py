@@ -10,7 +10,7 @@ with open('style.css') as f:
 # with open('main.js') as f:
 #     st.markdown(f'<script>{f.reaśd()}</script>',unsafe_allow_html=True)
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=5c3569775f29406dae5dfe921c2bb6d4&language=en-US".format(
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=b0aa0a1b1d496d238c8917554ee42356&language=en-US".format(
         movie_id)
     data = requests.get(url)
     data = data.json()
