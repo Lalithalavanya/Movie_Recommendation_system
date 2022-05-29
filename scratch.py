@@ -8,7 +8,7 @@ from PIL import Image
 st.write("## Watch your favourite movie    .")
 img=Image.open("image.jpeg")
 st.image(img)
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 # with open('main.js') as f:
