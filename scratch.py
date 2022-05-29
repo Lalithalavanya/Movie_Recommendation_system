@@ -4,15 +4,16 @@ import requests
 import pandas as pd
 import bz2
 import _pickle as cPickle
-from PIL import Image
-st.write("## Watch your favourite movie    .")
-img=Image.open("image.jpeg")
-st.image(img)
+
 # st.set_page_config(layout="wide")
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
 # with open('main.js') as f:
 #     st.markdown(f'<script>{f.reaśd()}</script>',unsafe_allow_html=True)
+from PIL import Image
+st.write("## Watch your favourite movie    .")
+img=Image.open("image.jpeg")
+st.image(img)
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=b0aa0a1b1d496d238c8917554ee42356&language=en-US".format(
         movie_id)
