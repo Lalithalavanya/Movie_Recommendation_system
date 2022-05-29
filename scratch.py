@@ -11,7 +11,7 @@ with open('style.css') as f:
 # with open('main.js') as f:
 #     st.markdown(f'<script>{f.reaśd()}</script>',unsafe_allow_html=True)
 from PIL import Image
-st.write("## Watch your favourite movie    .")
+st.title('Movie Recommender System')
 img=Image.open("image.jpeg")
 st.image(img)
 def fetch_poster(movie_id):
@@ -42,7 +42,8 @@ data = decompress_pickle('similarity.pbz2')
 movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 movies=pd.DataFrame(movies_dict)
 similarity=data
-st.title('Movie Recommender System')
+
+st.write("## Watch your favourite movie    .")
 selected_movie=st.selectbox('Name a Movie',movies['title'].values)
 
 recommended_movie_names, recommended_movie_posters = recommend(selected_movie)
