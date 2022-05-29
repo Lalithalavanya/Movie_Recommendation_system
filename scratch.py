@@ -6,7 +6,7 @@ import bz2
 import _pickle as cPickle
 from PIL import Image
 st.write("## Watch your favourite movie    .")
-img=Image.open("image.jpg")
+img=Image.open("image.jpeg")
 st.image(img)
 st.set_page_config(layout="wide")
 with open('style.css') as f:
